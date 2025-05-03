@@ -21,50 +21,50 @@ use App\Console\Commands\RemoveExpiredPromotions;
 
 class AppServiceProvider extends ServiceProvider
 {
-    // public function register(): void
-    // {
-    //     $this->app->bind(CartPriceService::class, function ($app) {
-    //         return new CartPriceService($app->make(VoucherService::class));
-    //     });
-    // }
+    public function register(): void
+    {
+        $this->app->bind(CartPriceService::class, function ($app) {
+            return new CartPriceService($app->make(VoucherService::class));
+        });
+    }
 
-    // public function boot(): void
-    // {
-    //     $this->commands([
-    //         RemoveExpiredPromotions::class,
-    //     ]);
+    public function boot(): void
+    {
+        $this->commands([
+            RemoveExpiredPromotions::class,
+        ]);
 
-    //     $this->app->booted(function () {
-    //         $schedule = app(Schedule::class);
-    //         $schedule->command('promotions:remove-expired')->daily();
-    //     });
+        $this->app->booted(function () {
+            $schedule = app(Schedule::class);
+            $schedule->command('promotions:remove-expired')->daily();
+        });
 
-    //     $config = Config::first();
-    //     $categories = ProductCategory::get();
-    //     $hotproducts = Product::withoutTrashed()->orderBy('purchases', 'desc')->take(16)->get();
-    //     $discountedProducts = Product::withoutTrashed()->whereHas('promotion')->get();
-    //     $newProduct = Product::withoutTrashed()->orderBy('created_at', 'desc')->take(20)->get();
-    //     $loadBanner = Banner::all();
+        $config = Config::first();
+        $categories = ProductCategory::get();
+        $hotproducts = Product::withoutTrashed()->orderBy('purchases', 'desc')->take(16)->get();
+        $discountedProducts = Product::withoutTrashed()->whereHas('promotion')->get();
+        $newProduct = Product::withoutTrashed()->orderBy('created_at', 'desc')->take(20)->get();
+        $loadBanner = Banner::all();
 
-    //     View::share(compact(
-    //         'config',
-    //         'categories',
-    //         'hotproducts',
-    //         'discountedProducts',
-    //         'newProduct',
-    //         'loadBanner'
-    //     ));
+        View::share(compact(
+            'config',
+            'categories',
+            'hotproducts',
+            'discountedProducts',
+            'newProduct',
+            'loadBanner'
+        ));
 
-    //     View::composer('*', function ($view) {
-    //         $messageService = app(ChatsService::class);
-    //         $productService = app(ProductService::class);
-    //         $cartService = app(CartService::class);
+        View::composer('*', function ($view) {
+            $messageService = app(ChatsService::class);
+            $productService = app(ProductService::class);
+            $cartService = app(CartService::class);
 
-    //         $view->with([
-    //             'messages'    => $messageService->loadMessage(),
-    //             'newProduct'  => $productService->getNewProducts(),
-    //             'cartCount'   => $cartService->countItems(),
-    //         ]);
-    //     });
-    // }
+            $view->with([
+                'messages'    => $messageService->loadMessage(),
+                'newProduct'  => $productService->getNewProducts(),
+                'cartCount'   => $cartService->countItems(),
+            ]);
+        });
+    }
 }
