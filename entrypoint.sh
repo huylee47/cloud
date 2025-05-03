@@ -7,4 +7,6 @@ chown -R www-data:www-data /var/www/html
 
 php artisan optimize:clear
 
+npm run build
+
 exec "$@"
