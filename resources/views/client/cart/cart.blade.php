@@ -312,7 +312,7 @@
         if (productId) data.product_id = productId;
 
         try {
-            const response = await callApi("{{ route('client.cart.update') }}", "POST", data);
+            const response = await callApi(window.baseAppUrl + '/cart/cart/update', "POST", data);
             if (response.success) {
                 $(".total-price-" + cartId).text(response.new_total_price);
                 $(".subtotal-price").text(response.subtotal);
@@ -333,7 +333,7 @@
 
     async function applyVoucher(voucherCode) {
         try {
-            const response = await callApi("{{ route('client.cart.applyVoucher') }}", "POST", {
+            const response = await callApi(window.baseAppUrl + '/cart/applyVoucher', "POST", {
                 _token: '{{ csrf_token() }}',
                 voucher_code: voucherCode
             });
@@ -389,8 +389,8 @@
         var cartId = $(this).data("id");
         var row = $(this).closest("tr");
 
-        var removeUrl = "{{ route('client.cart.remove', ':id') }}".replace(":id", cartId);
-
+        // var removeUrl = "{{ route('client.cart.remove', ':id') }}".replace(":id", cartId);
+        var removeUrl = window.baseAppUrl + 'cart/remove/' + cartId;
         try {
             const response = await callApi(removeUrl, "POST", {
                 _token: '{{ csrf_token() }}'
