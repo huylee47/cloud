@@ -568,6 +568,8 @@
     <script type="text/javascript" src="{{ url('') }}/home/assets/js/pace.min.js"></script>
     <script type="text/javascript" src="{{ url('') }}/home/assets/js/slick.min.js"></script>
     <script type="text/javascript" src="{{ url('') }}/home/assets/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+
     <script src="https://js.pusher.com/8.4.0/pusher.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -576,53 +578,79 @@
 
     @vite(['resources/js/app.js'])
     <script>
+         window.baseAppUrl = "{{ env('APP_URL') }}";
+         async function callApi(url, method = 'GET', data = {}) {
+    try {
+        const options = {
+            method: method,
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            }
+        };
+
+        if (method !== 'GET') {
+            options.body = JSON.stringify(data);
+        }
+
+        const response = await fetch(url, options);
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('API call failed:', error);
+        return null;
+    }
+}
+
+  
         var sendMessageUrl = "{{ route('client.message.send') }}";
         var loadMessagesUrl = "{{ route('client.message.load') }}";
+        
         var currentUserId = "{{ auth()->id() ?? null }}"
         var guestId = "{{ session()->getId() }}";
         var userRole = document.querySelector('meta[name="user-role"]').getAttribute("content");
 
         $(document).ready(function () {
-            $('#search').on('keyup', function () {
-                let query = $(this).val();
-                if (query.length > 0) {
-                    $.ajax({
-                        url: "{{ route('client.product.search') }}",
-                        type: "GET",
-                        data: {
-                            s: query
-                        },
-                        success: function (data) {
-                            let dropdown = $('#search-dropdown');
-                            dropdown.empty(); // Xóa dữ liệu cũ
+            $('#search').on('keyup', async function () {
+            let query = $(this).val();
+            if (query.length > 0) {
+                try {
+                const data = await callApi(`${window.baseAppUrl}/products/search`, 'GET', { s: query });
+                let dropdown = $('#search-dropdown');
+                dropdown.empty(); // Clear old data
 
-                            if (data.length > 0) {
-                                data.forEach(product => {
-                                    dropdown.append(`
-                                    <li class="list-group-item">
-                                        <a href="/products/${product.slug}" class="d-flex align-items-center">
-                                            <img src="{{ url('') }}/admin/assets/images/product/${product.img}" 
-                                                 class="me-2" style="width: 50px; height: 50px; object-fit: cover;">
-                                            <span>${product.name}</span>
-                                        </a>
-                                    </li>
-                                `);
-                                });
-                                dropdown.show();
-                            } else {
-                                dropdown.hide();
-                            }
-                        }
+                if (data && data.length > 0) {
+                    data.forEach(product => {
+                    dropdown.append(`
+                        <li class="list-group-item">
+                        <a href="/products/${product.slug}" class="d-flex align-items-center">
+                            <img src="${window.baseAppUrl}/admin/assets/images/product/${product.img}" 
+                             class="me-2" style="width: 50px; height: 50px; object-fit: cover;">
+                            <span>${product.name}</span>
+                        </a>
+                        </li>
+                    `);
                     });
+                    dropdown.show();
                 } else {
-                    $('#search-dropdown').hide();
+                    dropdown.hide();
                 }
+                } catch (error) {
+                console.error('Error fetching search results:', error);
+                }
+            } else {
+                $('#search-dropdown').hide();
+            }
             });
 
             $(document).click(function (e) {
-                if (!$(e.target).closest("#search-form").length) {
-                    $("#search-dropdown").hide();
-                }
+            if (!$(e.target).closest("#search-form").length) {
+                $("#search-dropdown").hide();
+            }
             });
         });
     </script>
@@ -645,6 +673,33 @@
         });
     </script>
     <script>
+        async function callApi(url, method = 'GET', data = {}) {
+    try {
+        const options = {
+            method: method,
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            }
+        };
+
+        if (method !== 'GET') {
+            options.body = JSON.stringify(data);
+        }
+
+        const response = await fetch(url, options);
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('API call failed:', error);
+        return null;
+    }
+}
+
         $('#bot-chat-icon').click(function () {
             $('#bot-chat-modal').toggle();
             $(this).hide();
@@ -655,32 +710,44 @@
             $('#bot-chat-icon').show();
         });
 
-        function sendMessage() {
-            var prompt = $('#bot-chat-input').val();
-            var chatMessages = $('#bot-chat-messages');
-            var sendButton = $('#bot-send-message');
+        async function sendMessage() {
+    const prompt = $('#bot-chat-input').val();
+    const chatMessages = $('#bot-chat-messages');
+    const sendButton = $('#bot-send-message');
 
-            if (prompt.trim() === '') return;
+    if (prompt.trim() === '') return;
 
-            sendButton.prop('disabled', true);
+    sendButton.prop('disabled', true);
+    chatMessages.append('<div class="bot-user-message">' + prompt + '</div>');
 
-            chatMessages.append('<div class="bot-user-message">' + prompt + '</div>');
+    try {
+        const response = await callApi(window.baseAppUrl + '/ask-gemini', 'POST', {
+            _token: '{{ csrf_token() }}',
+            prompt: prompt
+        });
 
-            $.post('/ask-gemini', { _token: '{{ csrf_token() }}', prompt: prompt }, function (data) {
-                chatMessages.append('<div class="bot-bot-message">' + data.response + '</div>');
-                chatMessages.scrollTop(chatMessages[0].scrollHeight);
-                console.log(data.response);
-                sendButton.prop('disabled', false);
-            });
-
-            $('#bot-chat-input').val('');
+        if (response && response.response) {
+            chatMessages.append('<div class="bot-bot-message">' + response.response + '</div>');
+        } else {
+            chatMessages.append('<div class="bot-bot-message text-danger">Không nhận được phản hồi từ bot.</div>');
         }
+    } catch (error) {
+        chatMessages.append('<div class="bot-bot-message text-danger">Đã xảy ra lỗi. Vui lòng thử lại.</div>');
+        console.error(error);
+    }
+
+    chatMessages.scrollTop(chatMessages[0].scrollHeight);
+    sendButton.prop('disabled', false);
+    $('#bot-chat-input').val('');
+}
     </script>
 
 
 
 
     <script type="text/javascript" src="{{ url('') }}/home/assets/js/chat.js"></script>
+    @yield('cartScripts');
+
 </body>
 
 </html>

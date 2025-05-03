@@ -260,6 +260,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <script>
+                    window.baseAppUrl = "{{ env('APP_URL') }}";
+            async function callApi(url, method = 'GET', data = {}) {
+                try {
+                    const options = {
+                        method: method,
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        }
+                    };
+
+                    if (method !== 'GET') {
+                        options.body = JSON.stringify(data);
+                    }
+
+                    const response = await fetch(url, options);
+
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+
+                    return await response.json();
+                } catch (error) {
+                    console.error('API call failed:', error);
+                    return null;
+                }
+            }
+
+ 
         $(document).ready(function() {
             // Initialize selectpicker
             $('.selectpicker').selectpicker();
@@ -308,7 +337,7 @@
             });
 
             // Handle product selection
-            $('#product').on('changed.bs.select', function(e) {
+            $('#product').on('changed.bs.select', async function(e) {
                 const productId = $(this).val();
                 const $variantContainer = $('#variantContainer');
                 const $variantSelect = $('#variant');
@@ -332,51 +361,41 @@
                         variants: []
                     };
 
-                    // AJAX call to get product and variant information
-                    $.ajax({
-                        url: "{{ route('admin.product.getVariants') }}",
-                        method: "GET",
-                        data: {
-                            product_id: productId
-                        },
-                        beforeSend: function() {
-                            $variantSelect.prop('disabled', true);
-                            $variantSelect.selectpicker('refresh');
-                        },
-                        success: function(response) {
+                    try {
+                        // Fetch product and variant information using callApi
+                        const data = await callApi(`${window.baseAppUrl}/admin/bill/get-variants?product_id=${productId}`);
+
+                        if (data) {
                             // Store base product information
-                            currentProduct.base_price = response.product.base_price;
-                            currentProduct.base_stock = response.product.base_stock;
+                            currentProduct.base_price = data.product.base_price;
+                            currentProduct.base_stock = data.product.base_stock;
 
                             // Display base price and stock
-                            $('#price').val(response.product.base_price.toLocaleString() +
-                                ' đ');
-                            $('#priceValue').val(response.product.base_price);
-                            $('#stock').val(response.product.base_stock);
-                            $('#stockValue').val(response.product.base_stock);
+                            $('#price').val(data.product.base_price.toLocaleString() + ' đ');
+                            $('#priceValue').val(data.product.base_price);
+                            $('#stock').val(data.product.base_stock);
+                            $('#stockValue').val(data.product.base_stock);
                             calculateSubtotal();
 
                             // Check if product has variants
-                            if (response.variants && response.variants.length > 0) {
-                                currentProduct.variants = response.variants;
+                            if (data.variants && data.variants.length > 0) {
+                                currentProduct.variants = data.variants;
 
                                 // Add variant options
-                                $.each(response.variants, function(index, variant) {
+                                data.variants.forEach(variant => {
                                     let variantName = 'Không có thông tin';
                                     if (variant.attributes) {
-                                        const values = Object.values(variant
-                                                .attributes || {})
-                                            .map(attr => attr.value);
+                                        const values = Object.values(variant.attributes || {}).map(attr => attr.value);
                                         variantName = values.join(' - ');
                                     }
 
                                     $variantSelect.append(
                                         `<option value="${variant.id}" 
-                                data-price="${variant.discounted_price}" 
-                                data-stock="${variant.stock}"
-                                data-name="${variantName}">
-                                    ${variantName} : (${new Intl.NumberFormat().format(variant.discounted_price)}đ)
-                                </option>`
+                                    data-price="${variant.discounted_price}" 
+                                    data-stock="${variant.stock}"
+                                    data-name="${variantName}">
+                                        ${variantName} : (${new Intl.NumberFormat().format(variant.discounted_price)}đ)
+                                    </option>`
                                     );
                                 });
 
@@ -389,19 +408,16 @@
 
                             $variantSelect.prop('disabled', false);
                             $variantSelect.selectpicker('refresh');
-                        },
-                        error: function(xhr) {
-                            console.error('Error loading variants:', xhr.responseText);
-                            $variantSelect.prop('disabled', false);
-                            $variantSelect.selectpicker('refresh');
                         }
-                    });
+                    } catch (error) {
+                        console.error('Error loading variants:', error);
+                        $variantSelect.prop('disabled', false);
+                        $variantSelect.selectpicker('refresh');
+                    }
                 } else {
                     currentProduct = null;
                 }
             });
-
-            // Handle variant selection
             $('#variant').on('changed.bs.select', function() {
                 const selectedOption = $(this).find('option:selected');
 
@@ -447,44 +463,32 @@
 
 
                 if (voucherCode) {
-                    $.ajax({
-                        url: "{{ route('admin.bill.applyVoucher') }}",
-                        method: 'POST',
-                        data: {
-                            _token: "{{ csrf_token() }}",
-                            voucher_code: voucherCode,
-                            subtotal: subtotal
-                        },
-                        dataType: 'json',
-                        success: function(response) {
-                            $('#voucher_message').removeClass('text-danger text-success');
+                    callApi(`${window.baseAppUrl}/admin/bill/apply-voucher`, 'POST', {
+                        voucher_code: voucherCode,
+                        subtotal: subtotal
+                    }).then(response => {
+                        $('#voucher_message').removeClass('text-danger text-success');
 
-                            if (response.success) {
-                                $('#voucher_message').addClass('text-success').text(response
-                                    .message);
-                                $('#discount_amount_hidden').val(response.discount_amount);
+                        if (response && response.success) {
+                            $('#voucher_message').addClass('text-success').text(response.message);
+                            $('#discount_amount_hidden').val(response.discount_amount);
 
-                                currentDiscount = {
-                                    applied: true,
-                                    amount: response.discount_amount
-                                };
+                            currentDiscount = {
+                                applied: true,
+                                amount: response.discount_amount
+                            };
 
-                                voucherApplied = true;
+                            voucherApplied = true;
 
-                                // Cập nhật hiển thị tổng giá sau khi giảm
-                                updateTotalAmountWithDiscountOnly(response.discount_amount);
-                            } else {
-                                $('#voucher_message').addClass('text-danger').text(response
-                                    .message);
-                                resetDiscount();
-                            }
-
-                        },
-                        error: function() {
-                            $('#voucher_message').addClass('text-danger').text(
-                                'Có lỗi xảy ra khi áp dụng mã giảm giá.');
+                            // Cập nhật hiển thị tổng giá sau khi giảm
+                            updateTotalAmountWithDiscountOnly(response.discount_amount);
+                        } else {
+                            $('#voucher_message').addClass('text-danger').text(response ? response.message : 'Có lỗi xảy ra.');
                             resetDiscount();
                         }
+                    }).catch(() => {
+                        $('#voucher_message').addClass('text-danger').text('Có lỗi xảy ra khi áp dụng mã giảm giá.');
+                        resetDiscount();
                     });
                 } else {
                     resetDiscount();
