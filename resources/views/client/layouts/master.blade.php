@@ -510,7 +510,7 @@
 
     @vite(['resources/js/app.js'])
     <script>
-        window.baseAppUrl = "{{ env('APP_URL') }}";
+         window.baseAppUrl = "{{ env('APP_URL') }}";
         var sendMessageUrl = "{{ route('client.message.send') }}";
         var loadMessagesUrl = "{{ route('client.message.load') }}";
         
