@@ -1,0 +1,27 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tech-boy
+    container_name: tech-boy
+    restart: unless-stopped
+    ports:
+      - "10010:80"
+    volumes:
+      - .:/var/www/html
+      - /var/www/html/vendor
+      - /var/www/html/storage
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tech-boy
+    container_name: tech-boy-worker
+    restart: unless-stopped
+    volumes:
+      - .:/var/www/html
+      - /var/www/html/vendor
+      - /var/www/html/storage
+    command: php artisan queue:work --tries=3
