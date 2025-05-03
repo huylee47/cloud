@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Checklog extends Model
+class CheckLog extends Model
 {
     use HasFactory;
     protected $table = 'checklogs';
