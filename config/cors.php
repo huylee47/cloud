@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://tech-boy.taiyo.space', 'http://localhost:80', 'http://tech-boy.taiyo.space'],
+    'allowed_origins' => ['https://tech-boy.taiyo.space', 'http://localhost:80', 'http://tech-boy.taiyo.space', 'http://127.0.0.1:8000'],
 
     'allowed_origins_patterns' => [],
 

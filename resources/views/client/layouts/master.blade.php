@@ -510,8 +510,10 @@
 
     @vite(['resources/js/app.js'])
     <script>
+        window.baseAppUrl = "{{ env('APP_URL') }}";
         var sendMessageUrl = "{{ route('client.message.send') }}";
         var loadMessagesUrl = "{{ route('client.message.load') }}";
+        
         var currentUserId = "{{ auth()->id() ?? null }}"
         var guestId = "{{ session()->getId() }}";
         var userRole = document.querySelector('meta[name="user-role"]').getAttribute("content");
@@ -579,6 +581,33 @@
         });
     </script>
     <script>
+        async function callApi(url, method = 'GET', data = {}) {
+    try {
+        const options = {
+            method: method,
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            }
+        };
+
+        if (method !== 'GET') {
+            options.body = JSON.stringify(data);
+        }
+
+        const response = await fetch(url, options);
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('API call failed:', error);
+        return null;
+    }
+}
+
         $('#bot-chat-icon').click(function () {
             $('#bot-chat-modal').toggle();
             $(this).hide();
@@ -589,26 +618,36 @@
             $('#bot-chat-icon').show();
         });
 
-        function sendMessage() {
-            var prompt = $('#bot-chat-input').val();
-            var chatMessages = $('#bot-chat-messages');
-            var sendButton = $('#bot-send-message');
+        async function sendMessage() {
+    const prompt = $('#bot-chat-input').val();
+    const chatMessages = $('#bot-chat-messages');
+    const sendButton = $('#bot-send-message');
 
-            if (prompt.trim() === '') return;
+    if (prompt.trim() === '') return;
 
-            sendButton.prop('disabled', true);
+    sendButton.prop('disabled', true);
+    chatMessages.append('<div class="bot-user-message">' + prompt + '</div>');
 
-            chatMessages.append('<div class="bot-user-message">' + prompt + '</div>');
+    try {
+        const response = await callApi(window.baseAppUrl + '/ask-gemini', 'POST', {
+            _token: '{{ csrf_token() }}',
+            prompt: prompt
+        });
 
-            $.post('/ask-gemini', { _token: '{{ csrf_token() }}', prompt: prompt }, function (data) {
-                chatMessages.append('<div class="bot-bot-message">' + data.response + '</div>');
-                chatMessages.scrollTop(chatMessages[0].scrollHeight);
-                console.log(data.response);
-                sendButton.prop('disabled', false);
-            });
-
-            $('#bot-chat-input').val('');
+        if (response && response.response) {
+            chatMessages.append('<div class="bot-bot-message">' + response.response + '</div>');
+        } else {
+            chatMessages.append('<div class="bot-bot-message text-danger">Không nhận được phản hồi từ bot.</div>');
         }
+    } catch (error) {
+        chatMessages.append('<div class="bot-bot-message text-danger">Đã xảy ra lỗi. Vui lòng thử lại.</div>');
+        console.error(error);
+    }
+
+    chatMessages.scrollTop(chatMessages[0].scrollHeight);
+    sendButton.prop('disabled', false);
+    $('#bot-chat-input').val('');
+}
     </script>
 
 
