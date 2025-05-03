@@ -390,7 +390,7 @@
         var row = $(this).closest("tr");
 
         // var removeUrl = "{{ route('client.cart.remove', ':id') }}".replace(":id", cartId);
-        var removeUrl = window.baseAppUrl + 'cart/remove/' + cartId;
+        var removeUrl = window.baseAppUrl + '/cart/remove/' + cartId;
         try {
             const response = await callApi(removeUrl, "POST", {
                 _token: '{{ csrf_token() }}'
