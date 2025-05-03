@@ -1,0 +1,2023 @@
+{
+    "banners": [
+        {
+            "title": "Giảm giá mùa hè",
+            "image": "banner2.jpg"
+        },
+        {
+            "title": "Khuyến mãi 10% cho đơn hàng đầu tiên",
+            "image": "banner3.jpg"
+        },
+        {
+            "title": "Mua sắm thoải mái, miễn phí giao hàng",
+            "image": "banner4.jpg"
+        },
+        {
+            "title": "Giảm giá 50% cho sản phẩm Apple",
+            "image": "banner5.jpg"
+        },
+        {
+            "title": "Ưu đãi đặc biệt cho khách hàng VIP",
+            "image": "banner1.jpg"
+        }
+    ],
+
+    "blogs": [
+        {
+            "title": "10 mẹo sử dụng smartphone hiệu quả",
+            "content": "Chia sẻ 10 mẹo đơn giản nhưng cực kỳ hiệu quả giúp bạn sử dụng smartphone tốt hơn.",
+            "slug": "meo-su-dung-smartphone-hieu-qua",
+            "user_id": 1,
+            "image": "image1.jpg",
+            "published_at": "2025-01-19"
+        },
+        {
+            "title": "Tương lai của công nghệ AI",
+            "content": "AI sẽ thay đổi hoàn toàn cách chúng ta làm việc và sống trong tương lai gần.",
+            "slug": "tuong-lai-cua-cong-nghe-ai",
+            "user_id": 2,
+            "image": "image5.jpg",
+            "published_at": "2025-01-19"
+        },
+        {
+            "title": "Top 5 điện thoại đáng mua trong năm 2025",
+            "content": "Điện thoại nào sẽ lên ngôi trong năm 2025? Hãy cùng điểm qua 5 mẫu smartphone đáng chú ý.",
+            "slug": "top-5-dien-thoai-dang-mua-nam-2025",
+            "user_id": 1,
+            "image": "image2.jpg",
+            "published_at": "2025-01-19"
+        },
+        {
+            "title": "Xu hướng mua sắm trực tuyến trong thời đại số",
+            "content": "Mua sắm trực tuyến đang trở thành xu hướng, hãy cùng tìm hiểu về sự phát triển của ngành này.",
+            "slug": "xu-huong-mua-sam-truc-tuyen",
+            "user_id": 3,
+            "image": "image3.jpg",
+            "published_at": "2025-01-19"
+        },
+        {
+            "title": "Ứng dụng di động đang thay đổi thế giới",
+            "content": "Ứng dụng di động không chỉ giúp chúng ta trong công việc, mà còn thay đổi cách chúng ta giải trí và kết nối.",
+            "slug": "ung-dung-di-dong-thay-doi-the-gioi",
+            "user_id": 2,
+            "image": "image4.jpg",
+            "published_at": "2025-01-19"
+        }
+    ],
+    "brand": [
+        {
+            "name": "Apple"
+        },
+        {
+            "name": "Samsung"
+        },
+        {
+            "name": "Sony"
+        },
+        {
+            "name": "Xiaomi"
+        },
+        {
+            "name": "Oppo"
+        },
+        {
+            "name": "Vivo"
+        },
+        {
+            "name": "Realme"
+        },
+        {
+            "name": "Huawei"
+        },
+        {
+            "name": "LG"
+        },
+        {
+            "name": "OnePlus"
+        }
+    ],
+    "cart": [
+        {
+            "user_id": 1,
+            "cart_id": null,
+            "product_id": 1,
+            "variant_id": 2,
+            "quantity": 3
+        },
+        {
+            "user_id": 2,
+            "cart_id": null,
+            "product_id": 1,
+            "variant_id": 3,
+            "quantity": 2
+        },
+        {
+            "user_id": 3,
+            "cart_id": null,
+            "product_id": 1,
+            "variant_id": 1,
+            "quantity": 1
+        },
+        {
+            "user_id": 4,
+            "cart_id": null,
+            "product_id": 1,
+            "variant_id": 2,
+            "quantity": 5
+        },
+        {
+            "user_id": 1,
+            "cart_id": null,
+            "product_id": 1,
+            "variant_id": 4,
+            "quantity": 3
+        }
+    ],
+    "chats": [
+        {
+            "customer_id": 6,
+            "staff_id": 2,
+            "status_id": 1,
+            "created_at": "2025-01-19 10:00:00",
+            "updated_at": "2025-01-19 10:00:00"
+        },
+        {
+            "customer_id": 7,
+            "staff_id": 4,
+            "status_id": 2,
+            "created_at": "2025-01-19 11:30:00",
+            "updated_at": "2025-01-19 11:30:00"
+        },
+        {
+            "customer_id": 8,
+            "staff_id": 1,
+            "status_id": 3,
+            "created_at": "2025-01-19 12:15:00",
+            "updated_at": "2025-01-19 12:15:00"
+        },
+        {
+            "customer_id": 5,
+            "staff_id": 3,
+            "status_id": 1,
+            "created_at": "2025-01-19 13:00:00",
+            "updated_at": "2025-01-19 13:00:00"
+        },
+        {
+            "customer_id": 9,
+            "staff_id": 2,
+            "status_id": 2,
+            "created_at": "2025-01-19 14:00:00",
+            "updated_at": "2025-01-19 14:00:00"
+        }
+    ],
+    "checklog": [
+        {
+            "user_id": 1,
+            "created_at": "2025-01-19 10:00:00",
+            "updated_at": "2025-01-19 10:00:00"
+        },
+        {
+            "user_id": 2,
+            "created_at": "2025-01-19 11:00:00",
+            "updated_at": "2025-01-19 11:00:00"
+        },
+        {
+            "user_id": 3,
+            "created_at": "2025-01-19 12:00:00",
+            "updated_at": "2025-01-19 12:00:00"
+        }
+    ],
+    "comments": [
+        {
+            "user_id": 1,
+            "product_id": 1,
+            "content": "Sản phẩm rất tốt, tôi rất thích!",
+            "rate": 4.0,
+            "file_id": 1,
+            "status_id": 1
+        },
+        {
+            "user_id": 2,
+            "product_id": 2,
+            "content": "Chất lượng sản phẩm không như kỳ vọng.",
+            "rate": 2.0,
+            "file_id": 2,
+            "status_id": 2
+        },
+        {
+            "user_id": 3,
+            "product_id": 3,
+            "content": "Giá cả hợp lý, chất lượng tốt.",
+            "rate": 4.0,
+            "file_id": 3,
+            "status_id": 1
+        },
+        {
+            "user_id": 4,
+            "product_id": 4,
+            "content": "Rất tiếc, sản phẩm bị lỗi, cần cải thiện.",
+            "rate": 1.0,
+            "file_id": 4,
+            "status_id": 3
+        },
+        {
+            "user_id": 5,
+            "product_id": 5,
+            "content": "Mua tặng bạn bè, họ rất thích!",
+            "rate": 5.0,
+            "file_id": 5,
+            "status_id": 1
+        }
+    ],
+    "config": [
+        {
+            "favicon": "favicon.ico",
+            "logo": "logo.png",
+            "title": "Techboys - Shop điện thoại uy tín",
+            "address": "123 Đường ABC, TP.Hải Phòng, Việt Nam",
+            "map": "<iframe src='https://www.google.com/maps/embed?pb=...' width='600' height='450' frameborder='0' style='border:0' allowfullscreen></iframe>",
+            "hotline": "0901234567",
+            "facebook": "https://facebook.com/techboys",
+            "created_at": "2025-01-19 12:00:00",
+            "updated_at": "2025-01-19 12:00:00"
+        }
+    ],
+    "contacts": [
+        {
+            "name": "Nguyễn Văn A",
+            "email": "nguyenvana@example.com",
+            "phone": "0901234567",
+            "message": "Mình muốn biết thêm thông tin về sản phẩm iPhone 13."
+        },
+        {
+            "name": "Trần Thị B",
+            "email": "tranthib@example.com",
+            "phone": "0912345678",
+            "message": "Mình cần hỗ trợ về cách thanh toán."
+        },
+        {
+            "name": "Lê Minh C",
+            "email": "leminhc@example.com",
+            "phone": "0923456789",
+            "message": "Tôi gặp vấn đề khi đăng nhập vào tài khoản."
+        },
+        {
+            "name": "Phạm Quang D",
+            "email": "phamquangd@example.com",
+            "phone": "0934567890",
+            "message": "Tôi muốn được tư vấn về các sản phẩm laptop."
+        },
+        {
+            "name": "Đỗ Thị E",
+            "email": "dothie@example.com",
+            "phone": "0945678901",
+            "message": "Mình muốn hỏi về chính sách bảo hành sản phẩm."
+        }
+    ],
+    "images": [
+        {
+            "image": "iphone-13.jpg",
+            "product_id": 1,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "s21.jpg",
+            "product_id": 2,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "xiaomi-mi11.jpg",
+            "product_id": 3,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "iphone-12.jpg",
+            "product_id": 4,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "oppo-f19-pro.jpg",
+            "product_id": 5,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "note-20.jpg",
+            "product_id": 6,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "xiaomi-mi-10t-pro.jpg",
+            "product_id": 7,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "oppo-a54.jpg",
+            "product_id": 8,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "realme-x7-pro.jpg",
+            "product_id": 9,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "iphone-11.jpg",
+            "product_id": 10,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "z-fold-2.jpg",
+            "product_id": 11,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "xiaomi-redmi-note-9-pro.jpg",
+            "product_id": 12,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "oppo-a74.jpg",
+            "product_id": 13,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "realme-7-pro.jpg",
+            "product_id": 14,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "vivo-y31.jpg",
+            "product_id": 15,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "oppo-a53s.jpg",
+            "product_id": 16,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "realme-narzo-50.jpg",
+            "product_id": 17,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "vivo-y20s.jpg",
+            "product_id": 18,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "iphone-7.jpg",
+            "product_id": 19,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "A50.jpg",
+            "product_id": 20,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "iphone-8-plus.jpg",
+            "product_id": 21,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "xiaomi-redmi-note-10.jpg",
+            "product_id": 22,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "xiaomi-redmi-k40.jpg",
+            "product_id": 23,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "oppo-a94-5g.jpg",
+            "product_id": 24,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "realme-gt-5g.jpg",
+            "product_id": 25,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "vivo-v21-5g.jpg",
+            "product_id": 26,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "iphone-xs.jpg",
+            "product_id": 27,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "samsung-galaxy-a12.jpg",
+            "product_id": 28,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "xiaomi-redmi-note-12-pro.jpg",
+            "product_id": 29,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "iphone-12-mini.jpg",
+            "product_id": 30,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "oppo-a55.jpg",
+            "product_id": 31,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "samsung-galaxy-a72-5g.jpg",
+            "product_id": 32,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "xiaomi-mi-11-lite-5g.jpg",
+            "product_id": 33,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "oppo-a94-5g.jpg",
+            "product_id": 34,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "realme-gt-5g.jpg",
+            "product_id": 35,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "vivo-v21-5g.jpg",
+            "product_id": 36,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "iphone-xs.jpg",
+            "product_id": 37,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "samsung-galaxy-a12.jpg",
+            "product_id": 38,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "xiaomi-redmi-note-12-pro.jpg",
+            "product_id": 39,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "iphone-12-mini.jpg",
+            "product_id": 40,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "oppo-a55.jpg",
+            "product_id": 41,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "realme-narzo-31-pro.jpg",
+            "product_id": 42,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "vivo-y73.jpg",
+            "product_id": 43,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "iphone-15.jpg",
+            "product_id": 44,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "samsung-galaxy-s20-fe.jpg",
+            "product_id": 45,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "xiaomi-redmi-k43.jpg",
+            "product_id": 46,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "oppo-a73.jpg",
+            "product_id": 47,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "realme-x50-pro.jpg",
+            "product_id": 48,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "vivo-v2.jpg",
+            "product_id": 49,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        },
+        {
+            "image": "iphone-16.jpg",
+            "product_id": 50,
+            "created_at": "2025-02-18 12:00:00",
+            "updated_at": "2025-02-18 12:00:00"
+        }
+        ],
+
+    "message": [
+        {
+            "chat_id": 1,
+            "sender_id": 6,
+            "message": "Xin chào , tôi cần tìm điện thoại khoảng 10tr",
+            "created_at": "2023-03-13 12:00:00",
+            "updated_at": "2025-03-13 12:00:00"
+        },
+        {
+            "chat_id": 1,
+            "sender_id": 2,
+            "message": "Chào Anh , chúng tôi có rất nhiều điện thoại phù hợp",
+            "created_at": "2025-03-13 12:05:00",
+            "updated_at": "2025-03-13 12:05:00"
+        },
+        {
+            "chat_id": 2,
+            "sender_id": 7,
+            "message": "Xin chào , tôi muốn thay đổi thông tin đặt hàng",
+            "created_at": "2025-03-16 13:00:00",
+            "updated_at": "2025-03-16 13:00:00"
+        },
+        {
+            "chat_id": 2,
+            "sender_id": 4,
+            "message": "Chắc chắn rồi, vui lòng cho tôi xin số điện thoại của quý khách",
+            "created_at": "2025-03-16 13:05:00",
+            "updated_at": "2025-03-16 13:05:00"
+        },
+        {
+            "chat_id": 3,
+            "sender_id": 8,
+            "message": "Xin chào , tôi muốn biết khi nào sản phẩm sẽ dược giao",
+            "created_at": "2025-03-19 13:00:00",
+            "updated_at": "2025-03-19 13:00:00"
+        },
+        {
+            "chat_id": 3,
+            "sender_id": 3,
+            "message": "Thưa quý khách , sản phẩm sẽ được giao từ 3-5 ngày ",
+            "created_at": "2025-03-19 13:05:00",
+            "updated_at": "2025-03-19 13:05:00"
+        },
+        {
+            "chat_id": 4,
+            "sender_id": 5,
+            "message": "Xin chào sốp",
+            "created_at": "2025-03-21 13:00:00",
+            "updated_at": "2025-03-21 13:00:00"
+        },
+        {
+            "chat_id": 4,
+            "sender_id": 1,
+            "message": "Hê lô quý khách",
+            "created_at": "2025-03-21 13:05:00",
+            "updated_at": "2025-03-21 13:05:00"
+        },
+        {
+            "chat_id": 5,
+            "sender_id": 9,
+            "message": "Chủ sốp có ny chưa =))))",
+            "created_at": "2025-03-21 13:00:00",
+            "updated_at": "2025-03-21 13:00:00"
+        },
+        {
+            "chat_id": 5,
+            "sender_id": 2,
+            "message": "Ế toàn tập em ạ",
+            "created_at": "2025-03-21 14:05:00",
+            "updated_at": "2025-03-21 14:05:00"
+        }
+    ],
+    "attributes": [
+        {
+            "name": "Màu",
+            "is_multiple": 1
+        },
+        {
+            "name": "Ram",
+            "is_multiple": 0
+        },
+        {
+            "name": "Model",
+            "is_multiple": 0
+        }
+    ],
+    "attributes_values": [
+        {
+            "attributes_id": 1,
+            "value": "Light Blue"
+        },
+        {
+            "attributes_id": 1,
+            "value": "Chery"
+        },
+        {
+            "attributes_id": 1,
+            "value": "Titan"
+        },
+        {
+            "attributes_id": 1,
+            "value": "Gold"
+        },
+        {
+            "attributes_id": 1,
+            "value": "Space Gray"
+        },
+        {
+            "attributes_id": 2,
+            "value": "4GB"
+        },
+        {
+            "attributes_id": 2,
+            "value": "6GB"
+        },
+        {
+            "attributes_id": 2,
+            "value": "8GB"
+        },
+        {
+            "attributes_id": 2,
+            "value": "12GB"
+        },
+        {
+            "attributes_id": 2,
+            "value": "16GB"
+        },
+        {
+            "attributes_id": 2,
+            "value": "32GB"
+        },
+        {
+            "attributes_id": 3,
+            "value": "64GB"
+        },
+        {
+            "attributes_id": 3,
+            "value": "128GB"
+        },
+        {
+            "attributes_id": 3,
+            "value": "256GB"
+        },
+        {
+            "attributes_id": 3,
+            "value": "512GB"
+        },
+        {
+            "attributes_id": 3,
+            "value": "1TB"
+        }
+    ],
+    "products": [
+        {
+            "brand_id": 1,
+            "category_id": 1,
+            "purchases": 100,
+            "name": "iPhone 13",
+            "img": "iphone-13.jpg",
+            "slug": "iphone-13",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.5,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Apple."
+        },
+        {
+            "brand_id": 2,
+            "category_id": 1,
+            "purchases": 150,
+            "name": "Samsung Galaxy S21",
+            "img": "s21.jpg",
+            "slug": "samsung-galaxy-s21",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.7,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Samsung."
+        },
+        {
+            "brand_id": 3,
+            "category_id": 1,
+            "purchases": 200,
+            "name": "Xiaomi Mi 11",
+            "img": "xiaomi-mi11.jpg",
+            "slug": "xiaomi-mi-11",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.6,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Xiaomi."
+        },
+        {
+            "brand_id": 1,
+            "category_id": 1,
+            "purchases": 120,
+            "name": "iPhone 12",
+            "img": "iphone-12.jpg",
+            "slug": "iphone-12",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.3,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Apple."
+        },
+        {
+            "brand_id": 4,
+            "category_id": 1,
+            "purchases": 100,
+            "name": "Oppo F19 Pro",
+            "img": "oppo-f19-pro.jpg",
+            "slug": "oppo-f19-pro",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.2,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Oppo."
+        },
+        {
+            "brand_id": 2,
+            "category_id": 1,
+            "purchases": 130,
+            "name": "Samsung Galaxy Note 20",
+            "img": "note-20.jpg",
+            "slug": "samsung-galaxy-note-20",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.5,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Samsung."
+        },
+        {
+            "brand_id": 3,
+            "category_id": 1,
+            "purchases": 180,
+            "name": "Xiaomi Mi 10T Pro",
+            "img": "xiaomi-mi-10t-pro.jpg",
+            "slug": "xiaomi-mi-10t-pro",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.4,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Xiaomi."
+        },
+        {
+            "brand_id": 4,
+            "category_id": 1,
+            "purchases": 110,
+            "name": "Oppo A54",
+            "img": "oppo-a54.jpg",
+            "slug": "oppo-a54",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.1,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Oppo."
+        },
+        {
+            "brand_id": 5,
+            "category_id": 1,
+            "purchases": 95,
+            "name": "Realme X7 Pro",
+            "img": "realme-x7-pro.jpg",
+            "slug": "realme-x7-pro",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.3,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Realme."
+        },
+        {
+            "brand_id": 1,
+            "category_id": 1,
+            "purchases": 130,
+            "name": "iPhone 11",
+            "img": "iphone-11.jpg",
+            "slug": "iphone-11",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.5,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Apple."
+        },
+        {
+            "brand_id": 2,
+            "category_id": 1,
+            "purchases": 120,
+            "name": "Samsung Galaxy Z Fold 2",
+            "img": "z-fold-2.jpg",
+            "slug": "samsung-galaxy-z-fold-2",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.6,
+            "weight": 300,
+            "description": "Điện thoại thông minh gập màn hình của Samsung."
+        },
+        {
+            "brand_id": 3,
+            "category_id": 1,
+            "purchases": 150,
+            "name": "Xiaomi Redmi Note 9 Pro",
+            "img": "xiaomi-redmi-note-9-pro.jpg",
+            "slug": "xiaomi-redmi-note-9-pro",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.3,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Xiaomi."
+        },
+        {
+            "brand_id": 4,
+            "category_id": 1,
+            "purchases": 110,
+            "name": "Oppo A74",
+            "img": "oppo-a74.jpg",
+            "slug": "oppo-a74",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.1,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Oppo."
+        },
+        {
+            "brand_id": 5,
+            "category_id": 1,
+            "purchases": 100,
+            "name": "Realme 7 Pro",
+            "img": "realme-7-pro.jpg",
+            "slug": "realme-7-pro",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.4,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Realme."
+        },
+        {
+            "brand_id": 6,
+            "category_id": 1,
+            "purchases": 90,
+            "name": "Vivo Y31",
+            "img": "vivo-y31.jpg",
+            "slug": "vivo-y31",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.0,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Vivo."
+        },
+        {
+            "brand_id": 4,
+            "category_id": 1,
+            "purchases": 120,
+            "name": "Oppo A53s",
+            "img": "oppo-a53s.jpg",
+            "slug": "oppo-a53s",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.2,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Oppo."
+        },
+        {
+            "brand_id": 5,
+            "category_id": 1,
+            "purchases": 90,
+            "name": "Realme Narzo 50",
+            "img": "realme-narzo-50.jpg",
+            "slug": "realme-narzo-50",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.3,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Realme."
+        },
+        {
+            "brand_id": 6,
+            "category_id": 1,
+            "purchases": 80,
+            "name": "Vivo Y20s",
+            "img": "vivo-y20s.jpg",
+            "slug": "vivo-y20s",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.1,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Vivo."
+        },
+        {
+            "brand_id": 1,
+            "category_id": 1,
+            "purchases": 150,
+            "name": "iPhone 7",
+            "img": "iphone-7.jpg",
+            "slug": "iphone-7",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.0,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Apple."
+        },
+        {
+            "brand_id": 2,
+            "category_id": 1,
+            "purchases": 180,
+            "name": "Samsung Galaxy A50",
+            "img": "A50.jpg",
+            "slug": "samsung-galaxy-a50",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.5,
+            "weight": 300,
+            "description": "Điện thoại thông minh tầm trung của Samsung."
+        },
+        {
+            "brand_id": 1,
+            "category_id": 1,
+            "purchases": 160,
+            "name": "iPhone 8 Plus",
+            "img": "iphone-8-plus.jpg",
+            "slug": "iphone-8-plus",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.2,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Apple với thiết kế sang trọng."
+        },
+        {
+            "brand_id": 3,
+            "category_id": 1,
+            "purchases": 150,
+            "name": "Xiaomi Redmi Note 10",
+            "img": "xiaomi-redmi-note-10.jpg",
+            "slug": "xiaomi-redmi-note-10",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.4,
+            "weight": 300,
+            "description": "Điện thoại thông minh với màn hình AMOLED của Xiaomi."
+        },
+        {
+            "brand_id": 3,
+            "category_id": 1,
+            "purchases": 140,
+            "name": "Xiaomi Redmi K40",
+            "img": "xiaomi-redmi-k40.jpg",
+            "slug": "xiaomi-redmi-k40",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.5,
+            "weight": 300,
+            "description": "Điện thoại thông minh của Xiaomi."
+        },
+        {
+            "brand_id": 4,
+            "category_id": 1,
+            "purchases": 150,
+            "name": "Oppo A94 5G",
+            "img": "oppo-a94-5g.jpg",
+            "slug": "oppo-a94-5g",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.2,
+            "weight": 300,
+            "description": "Điện thoại Oppo hỗ trợ 5G với thiết kế đẹp."
+        },
+        {
+            "brand_id": 5,
+            "category_id": 1,
+            "purchases": 120,
+            "name": "Realme GT 5G",
+            "img": "realme-gt-5g.jpg",
+            "slug": "realme-gt-5g",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.6,
+            "weight": 300,
+            "description": "Điện thoại chơi game với hỗ trợ 5G của Realme."
+        },
+        {
+            "brand_id": 6,
+            "category_id": 1,
+            "purchases": 110,
+            "name": "Vivo V21 5G",
+            "img": "vivo-v21-5g.jpg",
+            "slug": "vivo-v21-5g",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.3,
+            "weight": 300,
+            "description": "Điện thoại Vivo hỗ trợ 5G và camera selfie tốt."
+        },
+        {
+            "brand_id": 1,
+            "category_id": 1,
+            "purchases": 140,
+            "name": "iPhone XS",
+            "img": "iphone-xs.jpg",
+            "slug": "iphone-xs",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.5,
+            "weight": 300,
+            "description": "Điện thoại cao cấp của Apple với màn hình OLED."
+        },
+        {
+            "brand_id": 2,
+            "category_id": 1,
+            "purchases": 140,
+            "name": "Samsung Galaxy A12",
+            "img": "samsung-galaxy-a12.jpg",
+            "slug": "samsung-galaxy-a12",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.1,
+            "weight": 300,
+            "description": "Điện thoại giá rẻ với màn hình lớn của Samsung."
+        },
+        {
+            "brand_id": 3,
+            "category_id": 1,
+            "purchases": 160,
+            "name": "Xiaomi Redmi Note 12 Pro",
+            "img": "xiaomi-redmi-note-12-pro.jpg",
+            "slug": "xiaomi-redmi-note-12-pro",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.5,
+            "weight": 300,
+            "description": "Điện thoại tầm trung của Xiaomi với camera 64MP."
+        },
+        {
+            "brand_id": 1,
+            "category_id": 1,
+            "purchases": 130,
+            "name": "iPhone 19 Mini",
+            "img": "iphone-19-mini.jpg",
+            "slug": "iphone-19-mini",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.6,
+            "weight": 300,
+            "description": "Điện thoại nhỏ gọn, thiết kế hiện đại của Apple 2077."
+        },
+        {
+            "brand_id": 4,
+            "category_id": 1,
+            "purchases": 150,
+            "name": "Oppo A55",
+            "img": "oppo-a55.jpg",
+            "slug": "oppo-a55",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.3,
+            "weight": 300,
+            "description": "Điện thoại giá rẻ với màn hình 6.5 inch của Oppo."
+        },
+        {
+            "brand_id": 2,
+            "category_id": 1,
+            "purchases": 140,
+            "name": "Samsung Galaxy A72 5G",
+            "img": "samsung-galaxy-a72-5g.jpg",
+            "slug": "samsung-galaxy-a72-5g",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.5,
+            "weight": 300,
+            "description": "Điện thoại tầm trung hỗ trợ 5G của Samsung."
+        },
+        {
+            "brand_id": 3,
+            "category_id": 1,
+            "purchases": 160,
+            "name": "Xiaomi Mi 11 Lite 5G",
+            "img": "xiaomi-mi-11-lite-5g.jpg",
+            "slug": "xiaomi-mi-11-lite-5g",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.4,
+            "weight": 300,
+            "description": "Điện thoại nhẹ và mỏng của Xiaomi với 5G."
+        },
+        {
+            "brand_id": 4,
+            "category_id": 1,
+            "purchases": 150,
+            "name": "Oppo A94 5G",
+            "img": "oppo-a94-5g.jpg",
+            "slug": "oppo-a94-5g",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.2,
+            "weight": 300,
+            "description": "Điện thoại Oppo hỗ trợ 5G với thiết kế đẹp."
+        },
+        {
+            "brand_id": 5,
+            "category_id": 1,
+            "purchases": 120,
+            "name": "Realme GT 5G",
+            "img": "realme-gt-5g.jpg",
+            "slug": "realme-gt-5g",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.6,
+            "weight": 300,
+            "description": "Điện thoại chơi game với hỗ trợ 5G của Realme."
+        },
+        {
+            "brand_id": 6,
+            "category_id": 1,
+            "purchases": 110,
+            "name": "Vivo V21 5G",
+            "img": "vivo-v21-5g.jpg",
+            "slug": "vivo-v21-5g",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.3,
+            "weight": 300,
+            "description": "Điện thoại Vivo hỗ trợ 5G và camera selfie tốt."
+        },
+        {
+            "brand_id": 1,
+            "category_id": 1,
+            "purchases": 140,
+            "name": "iPhone XS",
+            "img": "iphone-xs.jpg",
+            "slug": "iphone-xs",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.5,
+            "weight": 300,
+            "description": "Điện thoại cao cấp của Apple với màn hình OLED."
+        },
+        {
+            "brand_id": 2,
+            "category_id": 1,
+            "purchases": 140,
+            "name": "Samsung Galaxy A12",
+            "img": "samsung-galaxy-a12.jpg",
+            "slug": "samsung-galaxy-a12",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.1,
+            "weight": 300,
+            "description": "Điện thoại giá rẻ với màn hình lớn của Samsung."
+        },
+        {
+            "brand_id": 3,
+            "category_id": 1,
+            "purchases": 160,
+            "name": "Xiaomi Redmi Note 12 Pro",
+            "img": "xiaomi-redmi-note-12-pro.jpg",
+            "slug": "xiaomi-redmi-note-12-pro",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.5,
+            "weight": 300,
+            "description": "Điện thoại tầm trung của Xiaomi với camera 64MP."
+        },
+        {
+            "brand_id": 1,
+            "category_id": 1,
+            "purchases": 130,
+            "name": "iPhone 12 Mini",
+            "img": "iphone-12-mini.jpg",
+            "slug": "iphone-12-mini",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.4,
+            "weight": 300,
+            "description": "Điện thoại nhỏ gọn, thiết kế hiện đại của Apple."
+        },
+        {
+            "brand_id": 4,
+            "category_id": 1,
+            "purchases": 150,
+            "name": "Oppo A55",
+            "img": "oppo-a55.jpg",
+            "slug": "oppo-a55",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.3,
+            "weight": 300,
+            "description": "Điện thoại giá rẻ với màn hình 6.5 inch của Oppo."
+        },
+        {
+            "brand_id": 5,
+            "category_id": 1,
+            "purchases": 110,
+            "name": "Realme Narzo 31 Pro",
+            "img": "realme-narzo-31-pro.jpg",
+            "slug": "realme-narzo-31-pro",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.2,
+            "weight": 300,
+            "description": "Điện thoại hiệu năng mạnh mẽ của Realme với màn hình 120Hz."
+        },
+        {
+            "brand_id": 6,
+            "category_id": 1,
+            "purchases": 130,
+            "name": "Vivo Y73",
+            "img": "vivo-y73.jpg",
+            "slug": "vivo-y73",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.4,
+            "weight": 300,
+            "description": "Điện thoại thiết kế đẹp, hiệu suất ổn định của Vivo."
+        },
+        {
+            "brand_id": 1,
+            "category_id": 1,
+            "purchases": 160,
+            "name": "iPhone 15",
+            "img": "iphone-15.jpg",
+            "slug": "iphone-15",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.7,
+            "weight": 300,
+            "description": "Điện thoại Apple với camera kép, hiệu suất mạnh mẽ."
+        },
+        {
+            "brand_id": 2,
+            "category_id": 1,
+            "purchases": 170,
+            "name": "Samsung Galaxy S20 FE",
+            "img": "samsung-galaxy-s20-fe.jpg",
+            "slug": "samsung-galaxy-s20-fe",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.6,
+            "weight": 300,
+            "description": "Điện thoại flagship giá phải chăng của Samsung."
+        },
+        {
+            "brand_id": 3,
+            "category_id": 1,
+            "purchases": 140,
+            "name": "Xiaomi Redmi K43",
+            "img": "xiaomi-redmi-k43.jpg",
+            "slug": "xiaomi-redmi-k43",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.5,
+            "weight": 300,
+            "description": "Điện thoại flagship với Snapdragon 870 của Xiaomi."
+        },
+        {
+            "brand_id": 4,
+            "category_id": 1,
+            "purchases": 120,
+            "name": "Oppo A73",
+            "img": "oppo-a73.jpg",
+            "slug": "oppo-a73",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.2,
+            "weight": 300,
+            "description": "Điện thoại tầm trung của Oppo với màn hình AMOLED."
+        },
+        {
+            "brand_id": 5,
+            "category_id": 1,
+            "purchases": 100,
+            "name": "Realme X50 Pro",
+            "img": "realme-x50-pro.jpg",
+            "slug": "realme-x50-pro",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.8,
+            "weight": 300,
+            "description": "Điện thoại 5G flagship của Realme với hiệu năng mạnh mẽ."
+        },
+        {
+            "brand_id": 6,
+            "category_id": 1,
+            "purchases": 110,
+            "name": "Vivo V2",
+            "img": "vivo-v2.jpg",
+            "slug": "vivo-v2",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.3,
+            "weight": 300,
+            "description": "Điện thoại Vivo với camera selfie 44MP."
+        },
+        {
+            "brand_id": 1,
+            "category_id": 1,
+            "purchases": 180,
+            "name": "iPhone 16",
+            "img": "iphone-16.jpg",
+            "slug": "iphone-16",
+            "base_price": 0,
+            "base_stock":0,
+            "is_featured": 1,
+            "rate_average": 4.4,
+            "weight": 300,
+            "description": "Điện thoại của Apple với hiệu năng tuyệt vời và camera tốt."
+        }
+    ],
+    "product_categories": [
+        { "name": "Điện thoại" },
+        { "name": "Laptop" },
+        { "name": "Máy tính bảng" },
+        { "name": "Phụ kiện" },
+        { "name": "Tai nghe" },
+        { "name": "Smartwatch" },
+        { "name": "Tivi" },
+        { "name": "Máy ảnh" },
+        { "name": "Giới thiệu" }
+    ],
+    "product_variants": [
+        {
+            "product_id": 1,
+            "attribute_values": "{\"Màu\":\"1\",\"Ram\":\"6\"}",
+            "price": 12590000,
+            "stock": 50
+        },
+        {
+            "product_id": 1,
+            "attribute_values": "{\"Màu\":\"2\",\"Ram\":\"6\"}",
+            "price": 12590000,
+            "stock": 50
+        },
+        {
+            "product_id": 1,
+            "attribute_values": "{\"Màu\":\"3\",\"Ram\":\"7\"}",
+            "price": 13990000,
+            "stock": 30
+        },
+        {
+            "product_id": 1,
+            "attribute_values": "{\"Màu\":\"4\",\"Ram\":\"7\"}",
+            "price": 13990000,
+            "stock": 30
+        },
+        {
+            "product_id": 2,
+            "attribute_values": "{\"Màu\":\"5\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 40
+        },
+        {
+            "product_id": 3,
+            "attribute_values": "{\"Màu\":\"1\",\"Ram\":\"6\"}",
+            "price": 12590000,
+            "stock": 35
+        },
+        {
+            "product_id": 4,
+            "attribute_values": "{\"Màu\":\"2\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 40
+        },
+        {
+            "product_id": 5,
+            "attribute_values": "{\"Màu\":\"3\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 20
+        },
+        {
+            "product_id": 6,
+            "attribute_values": "{\"Màu\":\"4\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 7,
+            "attribute_values": "{\"Màu\":\"5\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 8,
+            "attribute_values": "{\"Màu\":\"1\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 9,
+            "attribute_values": "{\"Màu\":\"2\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 10,
+            "attribute_values": "{\"Màu\":\"3\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 11,
+            "attribute_values": "{\"Màu\":\"4\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 12,
+            "attribute_values": "{\"Màu\":\"5\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 13,
+            "attribute_values": "{\"Màu\":\"1\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 14,
+            "attribute_values": "{\"Màu\":\"2\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 15,
+            "attribute_values": "{\"Màu\":\"3\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 16,
+            "attribute_values": "{\"Màu\":\"4\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 17,
+            "attribute_values": "{\"Màu\":\"5\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 18,
+            "attribute_values": "{\"Màu\":\"1\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 19,
+            "attribute_values": "{\"Màu\":\"2\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 20,
+            "attribute_values": "{\"Màu\":\"3\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 21,
+            "attribute_values": "{\"Màu\":\"4\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 22,
+            "attribute_values": "{\"Màu\":\"5\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 23,
+            "attribute_values": "{\"Màu\":\"1\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 24,
+            "attribute_values": "{\"Màu\":\"2\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 25,
+            "attribute_values": "{\"Màu\":\"3\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 26,
+            "attribute_values": "{\"Màu\":\"4\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 27,
+            "attribute_values": "{\"Màu\":\"5\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 28,
+            "attribute_values": "{\"Màu\":\"1\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 29,
+            "attribute_values": "{\"Màu\":\"2\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 30,
+            "attribute_values": "{\"Màu\":\"3\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 31,
+            "attribute_values": "{\"Màu\":\"4\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 32,
+            "attribute_values": "{\"Màu\":\"5\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 33,
+            "attribute_values": "{\"Màu\":\"1\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 34,
+            "attribute_values": "{\"Màu\":\"2\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 35,
+            "attribute_values": "{\"Màu\":\"3\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 36,
+            "attribute_values": "{\"Màu\":\"4\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 37,
+            "attribute_values": "{\"Màu\":\"5\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 38,
+            "attribute_values": "{\"Màu\":\"1\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 39,
+            "attribute_values": "{\"Màu\":\"2\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 40,
+            "attribute_values": "{\"Màu\":\"3\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 41,
+            "attribute_values": "{\"Màu\":\"4\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 42,
+            "attribute_values": "{\"Màu\":\"5\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 43,
+            "attribute_values": "{\"Màu\":\"1\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 44,
+            "attribute_values": "{\"Màu\":\"2\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 45,
+            "attribute_values": "{\"Màu\":\"3\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 46,
+            "attribute_values": "{\"Màu\":\"4\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 47,
+            "attribute_values": "{\"Màu\":\"5\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 48,
+            "attribute_values": "{\"Màu\":\"1\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 49,
+            "attribute_values": "{\"Màu\":\"2\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        },
+        {
+            "product_id": 50,
+            "attribute_values": "{\"Màu\":\"3\",\"Ram\":\"6\"}",
+            "price": 10090000,
+            "stock": 50
+        }
+    ],
+    "promotion": [
+        {
+            "name": "Black Friday Sale",
+            "status_id": 1,
+            "product_id": 1,
+            "discount_percent": 30,
+            "end_date": "2025-05-19 10:00:00",
+            "created_at": "2025-01-19 10:00:00",
+            "updated_at": "2025-01-19 10:00:00"
+        },
+        {
+            "name": "Christmas Discount",
+            "status_id": 2,
+            "product_id": 2,
+            "discount_percent": 10,
+            "end_date": "2025-05-19 10:00:00",
+            "created_at": "2025-01-19 11:00:00",
+            "updated_at": "2025-01-19 11:00:00"
+        },
+        {
+            "name": "Summer Sale",
+            "status_id": 1,
+            "product_id": 3,
+            "discount_percent": 15,
+            "end_date": "2025-04-19 10:00:00",
+            "created_at": "2025-01-19 12:00:00",
+            "updated_at": "2025-01-19 12:00:00"
+        }
+    ],
+    "refund": [
+        {
+            "bill_id": 1,
+            "status_id": 2,
+            "reason": "The product was defective.",
+            "file_id": "file_1",
+            "created_at": "2025-01-19 12:00:00",
+            "updated_at": "2025-01-19 12:00:00"
+        },
+        {
+            "bill_id": 2,
+            "status_id": 3,
+            "reason": "The customer changed their mind.",
+            "file_id": "file_2",
+            "created_at": "2025-01-19 13:00:00",
+            "updated_at": "2025-01-19 13:00:00"
+        },
+        {
+            "bill_id": 3,
+            "status_id": 2,
+            "reason": "Received wrong item.",
+            "file_id": "file_3",
+            "created_at": "2025-01-19 14:00:00",
+            "updated_at": "2025-01-19 14:00:00"
+        }
+    ],
+    "storage": [
+        {
+            "file": "anhCmt1.jpg"
+        },
+        {
+            "file": "anhCmt2.jpg"
+        },
+        {
+            "file": "anhCmt3.jpg"
+        },
+        {
+            "file": "videoCmt.mp4"
+        },
+        {
+            "file": "videoCmt2.mp4"
+        }
+    ],
+    "users": [
+        {
+            "name": "admin",
+            "email": "admin@gmail.com",
+            "email_verified_at": "2025-01-16T12:00:00",
+            "username": "admin",
+
+            "password": "password123",
+            "phone": "0901234567",
+            "wallet": 10000,
+            "address": "123 Đường ABC, TP.Hải Phòng",
+            "gender": true,
+            "dob": "1990-05-10",
+            "status": 1,
+            "role_id": 1
+        },
+        {
+            "name": "Vũ Ngọc Minh Vương",
+            "email": "vuongvu@gmail.com",
+            "email_verified_at": "2025-01-16T12:00:00",
+            "username": "vungocminhvuong",
+            "password": "password123",
+            "phone": "0362145961",
+            "wallet": 100.5,
+            "address": "87 Tô Hiệu , Lê Chân, TP.Hải Phòng",
+            "gender": true,
+            "dob": "1990-05-10",
+            "status": 1,
+            "role_id": 1
+        },
+        {
+            "name": "Lê Khánh Huy",
+            "email": "khanhhuy@gmail.com",
+            "email_verified_at": "2025-01-16T12:00:00",
+            "username": "lekhanhhuy",
+            "password": "password123",
+            "phone": "2345678",
+            "wallet": 100.5,
+            "address": "815 Ngô Gia Tự , Hải An, TP.Hải Phòng",
+            "gender": true,
+            "dob": "1990-05-10",
+            "status": 1,
+            "role_id": 1
+        },
+        {
+            "name": "Vũ Đình Minh",
+            "email": "dinhminh@gmail.com",
+            "email_verified_at": "2025-01-16T12:00:00",
+            "username": "vudinhminh",
+            "password": "password123",
+            "phone": "3456789",
+            "wallet": 100.5,
+            "address": "11 Sở Dầu , Hồng Bàng , Hải Phòng",
+            "gender": true,
+            "dob": "1990-05-10",
+            "status": 1,
+            "role_id": 1
+        },
+        {
+            "name": "Trần Văn Tài",
+            "email": "vantai@gmail.com",
+            "email_verified_at": "2025-01-16T12:00:00",
+            "username": "tranvantai",
+            "password": "password123",
+            "phone": "5678910",
+            "wallet": 100.5,
+            "address": "Thuỷ Nguyêm, Hải Phòng",
+            "gender": true,
+            "dob": "1990-05-10",
+            "status": 1,
+            "role_id": 2
+        },
+        {
+            "name": "Nguyễn Duy Hùng",
+            "email": "hung@gmail.com",
+            "email_verified_at": "2025-01-16T12:00:00",
+            "username": "nguyenvana",
+            "password": "password123",
+            "phone": "0123456789",
+            "wallet": 100.5,
+            "address": "23 Ngô Gia Tự ,Hải An, TP.Hải Phòng",
+            "gender": true,
+            "dob": "1990-05-10",
+            "status": 1,
+            "role_id": 2
+        },
+        {
+            "name": "Phạm Quang Núi",
+            "email": "nui@gmail.com",
+            "email_verified_at": "2025-01-16T12:00:00",
+            "username": "phamquangnui",
+            "password": "password123",
+            "phone": "0123456789",
+            "wallet": 100.5,
+            "address": "2 Trần Phú ,Ngô Quyền TP.Hải Phòng",
+            "gender": true,
+            "dob": "1990-05-10",
+            "status": 1,
+            "role_id": 2
+        },
+        {
+            "name": "Trần Ngọc Trang",
+            "email": "trang@gmail.com",
+            "email_verified_at": "2025-01-16T12:00:00",
+            "username": "ngoctrang",
+            "password": "password123",
+            "phone": "0123456789",
+            "wallet": 100.5,
+            "address": "357 Đông Khê ,Ngô Quyền TP.Hải Phòng",
+            "gender": false,
+            "dob": "1990-05-10",
+            "status": 1,
+            "role_id": 2
+        },
+        {
+            "name": "Trần Thị Hương",
+            "email": "huong@gmail.com",
+            "email_verified_at": "2025-01-16T12:00:00",
+            "username": "tranthihuong",
+            "password": "password123",
+            "phone": "0123456789",
+            "wallet": 100.5,
+            "address": "Lũng Đông , Hải An, TP.Hải Phòng",
+            "gender": false,
+            "dob": "1990-05-10",
+            "status": 1,
+            "role_id": 2
+        }
+    ],
+    "vouchers": [
+        {
+            "name": "Giảm giá 10% tối đa 500k cho đơn hàng từ 500k",
+            "code": "DISCOUNT10",
+            "discount_percent": 10,
+            "discount_amount": null,
+            "quantity": 100,
+            "min_price": 500000,
+            "max_discount": 500000,
+            "start_date": "2025-01-22",
+            "end_date": "2025-06-25"
+        },
+        {
+            "name": "Giảm 100k cho đơn hàng từ 500k",
+            "code": "DISCOUNT100K",
+            "discount_percent": null,
+            "discount_amount": 100000,
+            "quantity": 50,
+            "min_price": 500000,
+            "max_discount": 1000000,
+            "start_date": "2025-01-22",
+            "end_date": "2025-06-25"
+        },
+        {
+            "name": "Giảm giá 20% tối đa 200k cho đơn hàng từ 1 triệu",
+            "code": "DISCOUNT20",
+            "discount_percent": 20,
+            "discount_amount": null,
+            "quantity": 200,
+            "min_price": 1000000,
+            "max_discount": 200000,
+            "start_date": "2025-01-22",
+            "end_date": "2025-06-25"
+        },
+        {
+            "name": "Giảm 50k cho tổng giá trị đơn hàng tối thiểu 100k",
+            "code": "DISCOUNT200K",
+            "discount_percent": null,
+            "discount_amount": 50000,
+            "quantity": 30,
+            "min_price": 100000,
+            "max_discount": 5000000,
+            "start_date": "2025-01-22",
+            "end_date": "2025-06-25"
+        },
+        {
+            "name": "Giảm giá 5% tối đa 5 triệu cho đơn hàng tối thiểu 1 triệu",
+            "code": "DISCOUNT5",
+            "discount_percent": 5,
+            "discount_amount": null,
+            "quantity": 150,
+            "min_price": 1000000,
+            "max_discount": 5000000,
+            "start_date": "2025-01-22",
+            "end_date": "2025-06-25"
+        }
+    ]
+}
