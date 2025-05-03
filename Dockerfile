@@ -32,10 +32,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN composer install --no-dev --optimize-autoloader
 
-RUN npm install
-
-RUN npm run build
-
 RUN php artisan key:generate
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
