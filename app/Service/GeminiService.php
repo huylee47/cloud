@@ -29,7 +29,9 @@ class GeminiService
     
         if ($matchingProducts->isNotEmpty()) {
             $productLines = $matchingProducts->map(function ($product) {
-                return "<a href='http://127.0.0.1:8000/products/{$product->slug}'>{$product->name}</a>";
+                $url = rtrim(config('app.url'), '/');
+                return "<a href='{$url}/products/{$product->slug}'>{$product->name}</a>";
+                
             })->implode(', ');
             $contextPrompt = "Cửa hàng Techboys hiện có bán đang bán 1 hoặc các sản phẩm liên quan như: {$productLines}. Bạn hãy viết một câu trả lời xác nhận cửa hàng có bán, gợi ý sản phẩm phù hợp nhất với prompt  như sau: '{$prompt}',sau đó trả về đường dẫn trong list {$productLines}  phù hợp nhất, và kết thúc bằng một câu hỏi mở cho khách.";
     
