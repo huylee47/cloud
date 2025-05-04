@@ -1,8 +1,10 @@
-<?php 
+<?php
+
 namespace App\Service;
 
 use Illuminate\Support\Facades\Http;
 use App\Models\Product;
+
 class GeminiService
 {
     protected $apiKey;
@@ -17,24 +19,25 @@ class GeminiService
     {
         $normalizedPrompt = strtolower($prompt);
         $keywords = explode(' ', $normalizedPrompt);
-    
+
         $query = Product::query();
-    
+
         foreach ($keywords as $keyword) {
             $query->orWhere('name', 'like', '%' . $keyword . '%');
         }
-    
+
         $matchingProducts = $query->get();
         // return $matchingProducts;
-    
+
         if ($matchingProducts->isNotEmpty()) {
             $productLines = $matchingProducts->map(function ($product) {
-                $url = rtrim(config('app.url'), '/');
+                $url = app()->environment('production')
+                    ? rtrim(env('APP_URL', 'https://tech-boy.taiyo.space'), '/')
+                    : 'http://127.0.0.1:8000';
                 return "<a href='{$url}/products/{$product->slug}'>{$product->name}</a>";
-                
             })->implode(', ');
             $contextPrompt = "Cửa hàng Techboys hiện có bán đang bán 1 hoặc các sản phẩm liên quan như: {$productLines}. Bạn hãy viết một câu trả lời xác nhận cửa hàng có bán, gợi ý sản phẩm phù hợp nhất với prompt  như sau: '{$prompt}',sau đó trả về đường dẫn trong list {$productLines}  phù hợp nhất, và kết thúc bằng một câu hỏi mở cho khách.";
-    
+
             $response = Http::post($this->baseUrl . '?key=' . $this->apiKey, [
                 'contents' => [
                     [
@@ -44,14 +47,14 @@ class GeminiService
                     ]
                 ]
             ]);
-    
+
             if ($response->successful()) {
                 return $response->json()['candidates'][0]['content']['parts'][0]['text'] ?? 'Không có phản hồi.';
             }
         }
-    
+
         $friendlyPrompt = "Khách hàng hỏi: '{$prompt}'. Hãy viết một câu trả lời tự nhiên, thân thiện như một Bot chat hỗ trợ chăm sóc khách hàng của cửa hàng Techboys.";
-    
+
         $response = Http::post($this->baseUrl . '?key=' . $this->apiKey, [
             'contents' => [
                 [
@@ -61,17 +64,11 @@ class GeminiService
                 ]
             ]
         ]);
-    
+
         if ($response->successful()) {
             return $response->json()['candidates'][0]['content']['parts'][0]['text'] ?? 'Không có phản hồi.';
         }
-    
+
         return 'Lỗi gọi Gemini: ' . $response->body();
     }
-    
-    
-    
-    
-    
-    
 }
