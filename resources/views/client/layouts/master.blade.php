@@ -9,11 +9,16 @@
     <meta name="user-id" content="{{ auth()->check() ? auth()->user()->id : 0 }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <title>Techboys </title>
-    <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/bootstrap.min.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/font-awesome.min.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/bootstrap-grid.min.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/bootstrap-reboot.min.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/font-techmarket.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/bootstrap.min.css"
+        media="all" />
+    <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/font-awesome.min.css"
+        media="all" />
+    <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/bootstrap-grid.min.css"
+        media="all" />
+    <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/bootstrap-reboot.min.css"
+        media="all" />
+    <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/font-techmarket.css"
+        media="all" />
     <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/slick.css" media="all" />
     <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/techmarket-font-awesome.css"
         media="all" />
@@ -22,8 +27,9 @@
     <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/style.css" media="all" />
     <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/real-time.css" media="all" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
-    
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
+
     <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/colors/blue.css" media="all" />
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url('') }}/home/assets/css/chat-bot.css" media="all" />
@@ -109,17 +115,19 @@
                     <div class="row">
                         <div class="site-branding">
                             <a href="{{ route('home') }}" class="custom-logo-link" rel="home">
-                                <img src="{{ url('') }}/admin/assets/images/config/{{ $config->logo }}" alt="">
+                                <img src="{{ url('') }}/admin/assets/images/config/{{ $config->logo }}"
+                                    alt="">
                             </a>
                         </div>
                         <!-- ====================== End Header Logo ====================== -->
                         <nav id="primary-navigation" class="primary-navigation" aria-label="Primary Navigation"
                             data-nav="flex-menu">
                             <ul id="menu-primary-menu" class="nav yamm">
-                                <li class="menu-item animate-dropdown {{ request()->routeIs('home') ? 'active' : '' }}">
+                                <li
+                                    class="menu-item animate-dropdown {{ request()->routeIs('home') ? 'active' : '' }}">
                                     <a title="about us" href="{{ route('home') }}">Trang chủ</a>
                                 </li>
-                                 <li
+                                <li
                                     class="menu-item animate-dropdown {{ request()->routeIs('client.product.index') ? 'active' : '' }}">
                                     <a title="Super deals" href="{{ route('client.product.index') }}">Sản phẩm</a>
                                 </li>
@@ -131,12 +139,14 @@
                                     class="menu-item animate-dropdown {{ request()->routeIs('contact') ? 'active' : '' }}">
                                     <a title="Headphones Sale" href="{{ route('contact') }}">Liên hệ</a>
                                 </li>
-                               
-                                <li class="menu-item animate-dropdown {{ request()->routeIs('blog') ? 'active' : '' }}">
+
+                                <li
+                                    class="menu-item animate-dropdown {{ request()->routeIs('blog') ? 'active' : '' }}">
                                     <a title="Headphones Sale" href="{{ route('blog') }}">Blog</a>
                                 </li>
                                 <li class="techmarket-flex-more-menu-item dropdown">
-                                    <a title="..." href="#" data-toggle="dropdown" class="dropdown-toggle">...</a>
+                                    <a title="..." href="#" data-toggle="dropdown"
+                                        class="dropdown-toggle">...</a>
                                     <ul class="overflow-items dropdown-menu"></ul>
                                 </li>
                             </ul>
@@ -168,15 +178,15 @@
                                             </a>
                                             <ul class="dropdown-menu" id="userDropdownMenu">
                                                 @auth
-                                                @if (Auth::user()->role_id == 1)
-                                                    <li>
-                                                        <a href="{{ route('admin.index') }}">
-                                                            <img src="{{ asset('home/assets/images/profile.png') }}">
-                                                            <p style="margin-top: 3px">Admin</p>
-                                                        </a>
-                                                    </li>
-                                                @endif
-                                            @endauth
+                                                    @if (Auth::user()->role_id == 1)
+                                                        <li>
+                                                            <a href="{{ route('admin.index') }}">
+                                                                <img src="{{ asset('home/assets/images/profile.png') }}">
+                                                                <p style="margin-top: 3px">Admin</p>
+                                                            </a>
+                                                        </li>
+                                                    @endif
+                                                @endauth
                                                 <li>
                                                     <a href="{{ route('client.edit') }}">
                                                         <img src="{{ asset('home/assets/images/profile.png') }}">
@@ -226,8 +236,9 @@
 
                     <form class="navbar-search" method="get" action="{{ route('client.product.search') }}">
                         <div class="input-group">
-                            <input type="text" id="search" class="form-control search-field product-search-field"
-                                name="s" placeholder="Nhập sản phẩm muốn tìm" required />
+                            <input type="text" id="search"
+                                class="form-control search-field product-search-field" name="s"
+                                placeholder="Nhập sản phẩm muốn tìm" required />
                             <div class="input-group-btn input-group-append">
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-search"></i>
@@ -287,7 +298,8 @@
                     <!-- /.row -->
                     <div class="techmarket-sticky-wrap">
                         <div class="row">
-                            <nav id="handheld-navigation" class="handheld-navigation" aria-label="Handheld Navigation">
+                            <nav id="handheld-navigation" class="handheld-navigation"
+                                aria-label="Handheld Navigation">
                                 <button class="btn navbar-toggler" type="button">
                                     <i class="tm tm-departments-thin"></i>
                                     <span>Menu</span>
@@ -297,9 +309,9 @@
                                     <ul id="menu-departments-menu-1" class="nav">
                                         <li class="highlight menu-item animate-dropdown">
                                             @foreach ($categories as $category)
-                                                <li class="highlight menu-item animate-dropdown">
-                                                    <a title="{{ $category->name }}"
-                                                        href="{{ route('client.product.index') }}">{{ $category->name }}</a>
+                                        <li class="highlight menu-item animate-dropdown">
+                                            <a title="{{ $category->name }}"
+                                                href="{{ route('client.product.index') }}">{{ $category->name }}</a>
                                             @endforeach
                                     </ul>
                                 </div>
@@ -313,8 +325,8 @@
                                         <label class="screen-reader-text"
                                             for="woocommerce-product-search-field-0">Search for:</label>
                                         <input type="search" id="woocommerce-product-search-field-0"
-                                            class="search-field" placeholder="Nhập sản phẩm muốn tìm kiếm" value=""
-                                            name="s" />
+                                            class="search-field" placeholder="Nhập sản phẩm muốn tìm kiếm"
+                                            value="" name="s" />
                                         <input type="submit" value="Search" />
                                         <input type="hidden" name="post_type" value="product" />
                                     </form>
@@ -356,7 +368,8 @@
         </div>
         {{-- Modal ChatBot --}}
         <div id="bot-chat-icon" class="bot-real-time-icon">
-            <img src="{{ url('') }}/admin/assets/images/config/{{ $config->favicon }}" alt="" width="40px">
+            <img src="{{ url('') }}/admin/assets/images/config/{{ $config->favicon }}" alt=""
+                width="40px">
             <div id="chat-title" class="chat-title">
                 Chat cùng Techboys AI
             </div>
@@ -476,11 +489,11 @@
         </footer>
     </div>
     <script>
-        document.querySelector('.user-menu-toggle').addEventListener('click', function () {
+        document.querySelector('.user-menu-toggle').addEventListener('click', function() {
             var dropdownMenu = document.getElementById('userDropdownMenu');
             dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
         });
-        window.addEventListener('click', function (e) {
+        window.addEventListener('click', function(e) {
             if (!e.target.matches('.user-menu-toggle') && !e.target.closest('.user-menu')) {
                 document.getElementById('userDropdownMenu').style.display = 'none';
             }
@@ -510,54 +523,57 @@
 
     @vite(['resources/js/app.js'])
     <script>
-         window.baseAppUrl = "{{ env('APP_URL') }}";
-         async function callApi(url, method = 'GET', data = {}) {
-    try {
-        const options = {
-            method: method,
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+        window.baseAppUrl = "{{ env('APP_URL') }}";
+        async function callApi(url, method = 'GET', data = {}) {
+            try {
+                const options = {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                };
+
+                if (method !== 'GET') {
+                    options.body = JSON.stringify(data);
+                }
+
+                const response = await fetch(url, options);
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                return await response.json();
+            } catch (error) {
+                console.error('API call failed:', error);
+                return null;
             }
-        };
-
-        if (method !== 'GET') {
-            options.body = JSON.stringify(data);
         }
 
-        const response = await fetch(url, options);
 
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
+        var sendMessageUrl = window.baseAppUrl + "/message/send";
+        var loadMessagesUrl = window.baseAppUrl + "/message/load";
 
-        return await response.json();
-    } catch (error) {
-        console.error('API call failed:', error);
-        return null;
-    }
-}
 
-  
-        var sendMessageUrl = "{{ route('client.message.send') }}";
-        var loadMessagesUrl = "{{ route('client.message.load') }}";
-        
         var currentUserId = "{{ auth()->id() ?? null }}"
         var guestId = "{{ session()->getId() }}";
         var userRole = document.querySelector('meta[name="user-role"]').getAttribute("content");
 
-        $(document).ready(function () {
-            $('#search').on('keyup', async function () {
-            let query = $(this).val();
-            if (query.length > 0) {
-                try {
-                const data = await callApi(`${window.baseAppUrl}/products/search`, 'GET', { s: query });
-                let dropdown = $('#search-dropdown');
-                dropdown.empty(); // Clear old data
+        $(document).ready(function() {
+            $('#search').on('keyup', async function() {
+                let query = $(this).val();
+                if (query.length > 0) {
+                    try {
+                        const data = await callApi(`${window.baseAppUrl}/products/search`, 'GET', {
+                            s: query
+                        });
+                        let dropdown = $('#search-dropdown');
+                        dropdown.empty(); // Clear old data
 
-                if (data && data.length > 0) {
-                    data.forEach(product => {
-                    dropdown.append(`
+                        if (data && data.length > 0) {
+                            data.forEach(product => {
+                                dropdown.append(`
                         <li class="list-group-item">
                         <a href="/products/${product.slug}" class="d-flex align-items-center">
                             <img src="${window.baseAppUrl}/admin/assets/images/product/${product.img}" 
@@ -566,28 +582,28 @@
                         </a>
                         </li>
                     `);
-                    });
-                    dropdown.show();
+                            });
+                            dropdown.show();
+                        } else {
+                            dropdown.hide();
+                        }
+                    } catch (error) {
+                        console.error('Error fetching search results:', error);
+                    }
                 } else {
-                    dropdown.hide();
+                    $('#search-dropdown').hide();
                 }
-                } catch (error) {
-                console.error('Error fetching search results:', error);
-                }
-            } else {
-                $('#search-dropdown').hide();
-            }
             });
 
-            $(document).click(function (e) {
-            if (!$(e.target).closest("#search-form").length) {
-                $("#search-dropdown").hide();
-            }
+            $(document).click(function(e) {
+                if (!$(e.target).closest("#search-form").length) {
+                    $("#search-dropdown").hide();
+                }
             });
         });
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             // Pusher.logToConsole = true;
             console.log("Lắng nghe kênh: admin.blocked." + currentUserId);
 
@@ -606,72 +622,73 @@
     </script>
     <script>
         async function callApi(url, method = 'GET', data = {}) {
-    try {
-        const options = {
-            method: method,
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            try {
+                const options = {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                };
+
+                if (method !== 'GET') {
+                    options.body = JSON.stringify(data);
+                }
+
+                const response = await fetch(url, options);
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                return await response.json();
+            } catch (error) {
+                console.error('API call failed:', error);
+                return null;
             }
-        };
-
-        if (method !== 'GET') {
-            options.body = JSON.stringify(data);
         }
 
-        const response = await fetch(url, options);
-
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-
-        return await response.json();
-    } catch (error) {
-        console.error('API call failed:', error);
-        return null;
-    }
-}
-
-        $('#bot-chat-icon').click(function () {
+        $('#bot-chat-icon').click(function() {
             $('#bot-chat-modal').toggle();
             $(this).hide();
         });
 
-        $('#bot-close-chat').click(function () {
+        $('#bot-close-chat').click(function() {
             $('#bot-chat-modal').hide();
             $('#bot-chat-icon').show();
         });
 
         async function sendMessage() {
-    const prompt = $('#bot-chat-input').val();
-    const chatMessages = $('#bot-chat-messages');
-    const sendButton = $('#bot-send-message');
+            const prompt = $('#bot-chat-input').val();
+            const chatMessages = $('#bot-chat-messages');
+            const sendButton = $('#bot-send-message');
 
-    if (prompt.trim() === '') return;
+            if (prompt.trim() === '') return;
 
-    sendButton.prop('disabled', true);
-    chatMessages.append('<div class="bot-user-message">' + prompt + '</div>');
+            sendButton.prop('disabled', true);
+            chatMessages.append('<div class="bot-user-message">' + prompt + '</div>');
 
-    try {
-        const response = await callApi(window.baseAppUrl + '/ask-gemini', 'POST', {
-            _token: '{{ csrf_token() }}',
-            prompt: prompt
-        });
+            try {
+                const response = await callApi(window.baseAppUrl + '/ask-gemini', 'POST', {
+                    _token: '{{ csrf_token() }}',
+                    prompt: prompt
+                });
 
-        if (response && response.response) {
-            chatMessages.append('<div class="bot-bot-message">' + response.response + '</div>');
-        } else {
-            chatMessages.append('<div class="bot-bot-message text-danger">Không nhận được phản hồi từ bot.</div>');
+                if (response && response.response) {
+                    chatMessages.append('<div class="bot-bot-message">' + response.response + '</div>');
+                } else {
+                    chatMessages.append(
+                        '<div class="bot-bot-message text-danger">Không nhận được phản hồi từ bot.</div>');
+                }
+            } catch (error) {
+                chatMessages.append('<div class="bot-bot-message text-danger">Đã xảy ra lỗi. Vui lòng thử lại.</div>');
+                console.error(error);
+            }
+
+            chatMessages.scrollTop(chatMessages[0].scrollHeight);
+            sendButton.prop('disabled', false);
+            $('#bot-chat-input').val('');
         }
-    } catch (error) {
-        chatMessages.append('<div class="bot-bot-message text-danger">Đã xảy ra lỗi. Vui lòng thử lại.</div>');
-        console.error(error);
-    }
-
-    chatMessages.scrollTop(chatMessages[0].scrollHeight);
-    sendButton.prop('disabled', false);
-    $('#bot-chat-input').val('');
-}
     </script>
 
 
